@@ -12,37 +12,7 @@
 </div>
 
 <div class="messages">
-  <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-      tomo
-      </div>
-      <div class="message-date">
-      2020/1/1(Sun) 12:10:20
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-      おはよう！
-      </div>
-    </div>
-  </div>
-
-    <div class="message">
-    <div class="upper-message">
-      <div class="message-user">
-      aki
-      </div>
-      <div class="message-date">
-      2020/1/2(Mon) 12:15:55
-      </div>
-    </div>
-    <div class="lower-message">
-      <div class="message-content">
-      元気にしてる？
-      </div>
-    </div>
-  </div>
+  <%= render partial: 'message', collection: @messages %>
 </div>
 
 <%= form_with model: [@room, @message], class: 'form', local: true do |f| %>
